@@ -29,9 +29,9 @@ router.post('/', (req, res) => {
   let newItem = req.body;
   console.log(`Adding item`, newItem);
 
-  let queryText = `INSERT INTO "item" ("item_name", "amount", "amount_unit", "category", "store")
-                   VALUES ($1, $2, $3, $4, $5);`;
-  pool.query(queryText, [newItem.itemName, newItem.amountNumber, newItem.amountUnit, newItem.category, newItem.shoppingStore])
+  let queryText = `INSERT INTO "item" ("item_name", "amount", "amount_unit", "category", "store", "user_id")
+                   VALUES ($1, $2, $3, $4, $5, $6)  ;`;
+  pool.query(queryText, [newItem.itemName, newItem.amountNumber, newItem.amountUnit, newItem.category, newItem.shoppingStore, newItem.userID])
     .then(result => {
       res.sendStatus(201);
     })

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import axios from 'axios';
 
 class AddItem extends Component {
@@ -10,7 +10,8 @@ class AddItem extends Component {
             amountNumber: '',
             amountUnit: '',
             category: '',
-            shoppingStore: ''
+            shoppingStore: '',
+            userID: this.props.user.id
         }
     }
 
@@ -27,6 +28,7 @@ class AddItem extends Component {
 
     handleAddItemClick = (event) => {
         event.preventDefault();
+        // this.setState({userID: this.props.user.id})
         console.log(`Adding Item`, this.state.newItem);
         // TODO - axios request to server to add item
         axios({
@@ -156,4 +158,12 @@ class AddItem extends Component {
     }
 }
 
-export default AddItem;
+// Instead of taking everything from state, we just want the user info.
+// if you wanted you could write this code like this:
+// const mapStateToProps = ({user}) => ({ user });
+const mapStateToProps = state => ({
+    user: state.user,
+  });
+  
+  // this allows us to use <App /> in index.js
+  export default connect(mapStateToProps)(AddItem);
