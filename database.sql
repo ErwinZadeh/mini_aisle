@@ -13,7 +13,7 @@ CREATE TABLE "user" (
 CREATE TABLE "item" (
   "id" SERIAL PRIMARY KEY ,
   "item_name" VARCHAR(50) NOT NULL,
-  "status" VARCHAR(50) NOT NULL,
+  "status" Boolean DEFAULT FALSE,
   "amount" INT,
   "amount_unit" VARCHAR(50) NOT NULL,
   "category" VARCHAR(50) NOT NULL,
