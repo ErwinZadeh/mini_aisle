@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   HashRouter as Router,
   Route,
@@ -6,7 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import Nav from '../Nav/Nav';
 import Footer from '../Footer/Footer';
@@ -17,11 +17,16 @@ import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
 import InfoPage from '../InfoPage/InfoPage';
 
+import AddItem from '../AddItem/AddItem'
+import MyList from '../MyList/MyList'
+import Stores from '../Stores/Stores'
+
 import './App.css';
 
+
 class App extends Component {
-  componentDidMount () {
-    this.props.dispatch({type: 'FETCH_USER'})
+  componentDidMount() {
+    this.props.dispatch({ type: 'FETCH_USER' })
   }
 
   render() {
@@ -31,7 +36,7 @@ class App extends Component {
           <Nav />
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
-            <Redirect exact from="/" to="/home" />
+            {/* <Redirect exact from="/" to="/home" /> */}
             {/* Visiting localhost:3000/about will show the about page.
             This is a route anyone can see, no login necessary */}
             <Route
@@ -45,8 +50,18 @@ class App extends Component {
             Even though it seems like they are different pages, the user is always on localhost:3000/home */}
             <ProtectedRoute
               exact
-              path="/home"
-              component={UserPage}
+              path="/"
+              component={AddItem}
+            />
+            <ProtectedRoute
+              exact
+              path="/MyList"
+              component={MyList}
+            />
+            <ProtectedRoute
+              exact
+              path="/Stores"
+              component={Stores}
             />
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will see the info page instead. */}
@@ -58,10 +73,27 @@ class App extends Component {
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
+
+
+          {/* <div className="App">
+            <header className="App-header">
+              <h2 className="App-title">Mini AISLE!</h2>
+            </header>
+            <br />
+            <main>
+              <Route exact path='/' component={AddItem} />
+              <Route path='/MyList' component={MyList} />
+              <Route path='/Stores' component={Stores} />
+            </main>
+            <footer className="App-footer"></footer>
+          </div> */}
+
+
           <Footer />
         </div>
       </Router>
-  )}
+    )
+  }
 }
 
 export default connect()(App);
