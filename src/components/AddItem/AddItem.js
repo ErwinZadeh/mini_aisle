@@ -36,7 +36,15 @@ class AddItem extends Component {
         }).then((reponse) => {
             console.log('response', reponse);
             alert('Item was added to your list!');
-            
+            // clear out the inputs, by setting the state to be an empty ''
+            // set state = 
+            //     newItem: {
+            //         itemName: '',
+            //         amountNumber: '',
+            //         amountUnit: '',
+            //         category: '',
+            //         shoppingStore: ''
+            //     }
         }).catch((error) => {
             alert(`Couldn't submit responses at this time`);
             console.log('Error posting to server', error)
@@ -95,7 +103,7 @@ class AddItem extends Component {
                        <option value="Baked">Baked</option>
                        <option value="Candy">Candy</option>
                        <option value="Houseware">Houseware</option>
-                       <option value="10">Other</option>
+                       <option value="Other">Other</option>
                     </select><br />
 
                     {/* <input placeholder="category" type="text" value={this.state.newItem.category}

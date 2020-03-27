@@ -8,7 +8,8 @@ import React from 'react';
 const AboutPage = () => (
   <div>
     <div>
-        <h2>Mini - A.I.S.L.E</h2><h5>( Advanced Integral Shopping List Experience )</h5>
+        <h1>Future Version --> A.I.S.L.E </h1>
+        <h3>( Advanced Integral Shopping List Experience )</h3>
 
         <h4>Overview:</h4>
 
