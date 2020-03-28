@@ -82,7 +82,18 @@ class Stores extends Component {
                     <tbody>
                         {this.state.itemsArray.map((itemsArray) => (
                             <tr key={itemsArray.id}>
-                                <td><button onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>{itemsArray.status?<>Done</>:<>TO Do</>}</button></td>
+                                {/* I just replaced the name of the current 
+                                "To Do/Done" button with below "conditional rendering" */}
+                                <td><button onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>{itemsArray.status?<>Done</>:<>To Do</>}</button></td>
+                                {/* This is conditional rendering. 
+                                Means;
+                                if "True" or "?" render "Done", 
+                                if ":" or "False" render "ToDo" */}
+
+                                {/* {itemsArray.status
+                                    ? <td>Done</td>
+                                    : <td>TO Do</td>
+                                } */}
 
                                 <td>{itemsArray.item_name}</td>
                                 <td>{itemsArray.amount}</td>

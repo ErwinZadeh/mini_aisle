@@ -26,20 +26,6 @@ class MyList extends Component {
         })
     }
 
-    editButton = (id, status) => {
-        let newStatus = !status;
-
-        axios.put(`/item/${id}`, { key: newStatus })
-            .then(response => {
-                console.log('back from PUT/server:', response);
-                this.getAllItems();
-            })
-            .catch(error => {
-                console.log('Error in put', error);
-                alert('Could not update item at this time. Try again later.');
-            })
-    }
-
     deleteButton = (event) => {
         console.log("delete me!", event.target.name);
         axios.delete(`/item/${event.target.name}`)
@@ -90,7 +76,6 @@ class MyList extends Component {
                 <table className="itemTable">
                     <thead>
                         <tr>
-                            <th>Status</th>
                             <th>Item</th>
                             <th>Amount</th>
                             <th>Unit</th>
@@ -101,25 +86,12 @@ class MyList extends Component {
                     <tbody>
                         {this.state.itemsArray.map((itemsArray) => (
                             <tr key={itemsArray.id}>
-                                {/* I just replaced the name of the current 
-                                "To Do/Done" button with below "conditional rendering" */}
-                                <td><button onClick={() => this.editButton(itemsArray.id, itemsArray.status)}>{itemsArray.status?<>Done</>:<>TO Do</>}</button></td>
 
                                 <td>{itemsArray.item_name}</td>
                                 <td>{itemsArray.amount}</td>
                                 <td>{itemsArray.amount_unit}</td>
                                 <td>{itemsArray.store}</td>
                                 <td>{itemsArray.category}</td>
-
-                                {/* This is conditional rendering. 
-                                Means;
-                                if "True" or "?" render "Done", 
-                                if ":" or "False" render "ToDo" */}
-
-                                {/* {itemsArray.status
-                                    ? <td>Done</td>
-                                    : <td>TO Do</td>
-                                } */}
 
                                 <td><button name={itemsArray.id} onClick={(event) => this.deleteButton(event, itemsArray.id)}>Delete</button></td>
                             </tr>

@@ -4,6 +4,8 @@ import axios from 'axios';
 
 class AddItem extends Component {
 
+    // userID which we need to POST to user_id column in item table in database, 
+    // is being collected from Redux, which was provided from userReducer.js
     state = {
         newItem: {
             itemName: '',
