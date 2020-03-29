@@ -7,7 +7,11 @@ import './Nav.css';
 const Nav = (props) => (
   <div className="nav">
     <Link to="/home">
-      <h2 className="nav-title">Mini AISLE</h2>
+      {/* <h2 className="nav-title">Mini AISLE</h2> */}
+    </Link>
+    {/* Always show this link since the about page is not protected */}
+    <Link className="nav-link" to="/about">
+      About
     </Link>
     <div className="nav-right">
       <Link className="nav-link" to="/">
@@ -28,10 +32,6 @@ const Nav = (props) => (
           <LogOutButton className="nav-link"/>
         </>
       )}
-      {/* Always show this link since the about page is not protected */}
-      <Link className="nav-link" to="/about">
-        About
-      </Link>
     </div>
   </div>
 );

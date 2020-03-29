@@ -63,13 +63,14 @@ class AddItem extends Component {
     }
 
 
-    handleMyListClick = () => {
-        this.props.history.push('/MyList')
-    }
+    // handleMyListClick = () => {
+    //     this.props.history.push('/MyList')
+    // }
 
-    handleStoresClick = () => {
-        this.props.history.push('/Stores')
-    }
+    // handleStoresClick = () => {
+    //     this.props.history.push('/Stores')
+    // }
+    
 
     // clear inputs (1st Part),
     // by setting up the:
@@ -78,17 +79,22 @@ class AddItem extends Component {
         return (
             <div>
                 <header><h1>Add Item</h1></header>
+                {/* <section>
+                    <button onClick={this.handleMyListClick}>My List</button>
+                    <button onClick={this.handleStoresClick}>Stores</button>
+                </section> */}
+
                 <form onSubmit={this.handleAddItemClick}>
 
-                    <label>Name of Item: </label>
+                    <label><h4>Name of Item:</h4></label>
                     <input placeholder="item name" type="text" value={this.state.newItem.itemName}
                         onChange={(event) => this.handleItemChange('itemName', event)} /><br />
 
-                    <label>Amount: </label>
+                    <label><h4>Amount Number:</h4></label>
                     <input placeholder="amount" type="number" value={this.state.newItem.amountNumber}
-                        onChange={(event) => this.handleItemChange('amountNumber', event)} />
+                        onChange={(event) => this.handleItemChange('amountNumber', event)} /><br />
 
-                    <label> Unit: </label>
+                    <label><h4>Amount Unit:</h4></label>
                     <select className="unit-select" name="unit" placeholder="unit" type="text"
                         value={this.state.newItem.amountUnit}
                         onChange={(event) => this.handleItemChange('amountUnit', event)}>
@@ -104,7 +110,7 @@ class AddItem extends Component {
                     {/* <input placeholder="unit" type="text" value={this.state.newItem.amountUnit}
                         onChange={(event) => this.handleItemChange('amountUnit', event)} /><br /> */}
 
-                    <label> Category: </label>
+                    <label><h4>Category:</h4></label>
                     <select className="category-select" name="category" placeholder="category" type="text"
                         value={this.state.newItem.category}
                         onChange={(event) => this.handleItemChange('category', event)}>
@@ -124,7 +130,7 @@ class AddItem extends Component {
                     {/* <input placeholder="category" type="text" value={this.state.newItem.category}
                         onChange={(event) => this.handleItemChange('category', event)} /><br /> */}
 
-                    <label>Store: </label>
+                    <label><h4>Store:</h4></label>
                     <select className="store-select" name="store" placeholder="store" type="text"
                         value={this.state.newItem.shoppingStore}
                         onChange={(event) => this.handleItemChange('shoppingStore', event)}>
@@ -139,7 +145,7 @@ class AddItem extends Component {
                         <option value="Hy-Vee">Hy-Vee</option>
                         <option value="Whole Foods">Whole Foods</option>
                         <option value="Kowalsky">Kowalsky</option>
-                        <option value="Lunds">Lunds & Byerlys</option>
+                        <option value="Lunds & Byerlys">Lunds & Byerlys</option>
                         <option value="Fresh Thyme">Fresh Thyme</option>
                         <option value="Other">Other</option>
                     </select><br />
@@ -147,13 +153,8 @@ class AddItem extends Component {
                     {/* <input placeholder="store" type="text" value={this.state.newItem.shoppingStore}
                         onChange={(event) => this.handleItemChange('shoppingStore', event)} /><br /> */}
 
-                    <button type="submit">ADD ITEM</button><br />
+                    <button type="submit">ADD</button><br />
                 </form>
-
-                <footer>
-                    <button onClick={this.handleMyListClick}>My List</button>
-                    <button onClick={this.handleStoresClick}>Stores</button>
-                </footer>
 
             </div>
         )
@@ -169,3 +170,5 @@ const mapStateToProps = state => ({
   
   // this allows us to use <App /> in index.js
   export default connect(mapStateToProps)(AddItem);
+
+  

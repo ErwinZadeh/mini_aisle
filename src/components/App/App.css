@@ -1,49 +1,162 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: rgb(6, 37, 121);
+  margin: 10;
+}
+
+main {
+  margin: auto;
+  width: 80%;
 }
 
 .alert {
-    background-color: #ff4545;
-    margin: 50px;
+  background-color: #ff4545;
+  margin: 50px;
+}
+
+
+h1 {
+  /* background-color: #C8BBB1; */
+  background-color: #1741B3;
+  color: #FFD66E;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0.50em;
+  text-align: center;
+  text-shadow: 5px 1px 3px #333;
+  width: 100%;
+}
+
+h2 {
+  /* background-color: #C8BBB1; */
+  background-color: #1741B3;
+  color: #A39C29;
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0.50em;
+  text-align: center;
+  text-shadow: 5px 1px 3px #333;
+  width: 90%;
+}
+
+
+h3, h4, h5, h6 {
+  color: #050500
+}
+
+section:nth-of-type(odd) {
+  /* background-color: #FFD4CA; */
+  background-color: #1741B3;
+}
+
+section:nth-of-type(even) {
+  background-color: #5482FF;
 }
 
 form {
-    background-color: #dbd5d5;
-    width: 30%;
-    height: 250px;
-    margin: 20px auto;
-    padding: 25px;
-    border-radius: 2px;
+  background-color: #B38C29;
+  width: 80%;
+  height: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 2px;
+  border-radius: 0.25em;
+  box-shadow: 3px 4px 5px #FFCF54;
+}
+
+/* a {
+  color: #c9116a;
+  font-weight: bold;
+  text-decoration: none;
+} */
+
+a:visited {
+  color:#ffffff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/***********   FORMS   ***********/
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  padding: 5px;
 }
 
 input {
-    margin: 5px;
-    margin-bottom: 10px;
-}
-
-.log-in, .log-out, .register {
-  background-color: #00acb0;
-  border-radius: 4px;
-  color: #f8f8f8;
-  min-height: 50px;
-  min-width: 100px;
-  outline:0;
-  cursor: pointer;
+  border-radius: 0.5em;
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 0.5em;
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
   background-color: #008183;
 }
 
+.log-in, .log-out, .register {
+  background-color: #5482FF;
+  border-radius: 5px;
+  color: #f8f8f8;
+  min-height: 35px;
+  min-width: 80px;
+  outline:0;
+  cursor: pointer;
+}
+
 /* This line makes the "Register" and "Login" buttons look like links */
 .link-button {
-    background:none;
-    color:inherit;
-    border:none;
-    padding:0;
-    font: inherit;
-    outline:0;
-    border-bottom:1px solid #444; 
-    cursor: pointer;
+  background:none;
+  color:inherit;
+  border:none;
+  padding:0;
+  font: inherit;
+  outline:0;
+  border-bottom:1px solid #1741B3; 
+  cursor: pointer;
+}
+
+/***********   TABLES   ***********/
+
+table {
+  width: 100%;
+  background-color: #B38C29;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.5em;
+  text-align: center;
+}
+
+
+tbody tr:nth-of-type(odd) {
+  background-color: #FFD66E;
+}
+
+
+thead tr {
+  /*background-color: #DED0C5;*/
+  background-color: #A39C29;
+  color: #222222;
+}
+
+
+/**********   CLASSES   ***********/
+.center {
+  text-align: center;
+}
+
+.align-input {
+  margin-left: 115px;
+}
+
+
+.red {
+  background-color: red;
 }

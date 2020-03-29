@@ -39,18 +39,23 @@ class MyList extends Component {
             })
     }
 
-    handleAddItemClick = () => {
-        this.props.history.push('/')
-    }
+    // handleAddItemClick = () => {
+    //     this.props.history.push('/')
+    // }
 
-    handleStoresClick = () => {
-        this.props.history.push('/Stores')
-    }
+    // handleStoresClick = () => {
+    //     this.props.history.push('/Stores')
+    // }
 
     render() {
         return (
             <div>
-                <header><h1>My List</h1></header>
+                <header><h1>Items in order of Category</h1></header>
+
+                {/* <section>
+                    <button onClick={this.handleAddItemClick}>Add Item</button>
+                    <button onClick={this.handleStoresClick}>Stores</button>
+                </section> */}
 
                 {/* <ul>
                     {
@@ -80,7 +85,8 @@ class MyList extends Component {
                             <th>Amount</th>
                             <th>Unit</th>
                             <th>Store</th>
-                            <th>Type</th>
+                            <th>Category</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -99,13 +105,10 @@ class MyList extends Component {
                     </tbody>
                 </table>
 
-
-                <button onClick={this.handleAddItemClick}>Add Item</button>
-                <button onClick={this.handleStoresClick}>Stores</button>
-
             </div>
         )
     }
 }
 
 export default MyList;
+

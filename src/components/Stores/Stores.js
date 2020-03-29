@@ -54,19 +54,24 @@ class Stores extends Component {
     }
 
 
-    handleAddItemClick = () => {
-        this.props.history.push('/')
-    }
+    // handleAddItemClick = () => {
+    //     this.props.history.push('/')
+    // }
 
-    handleMyListClick = () => {
-        this.props.history.push('/MyList')
-    }
+    // handleMyListClick = () => {
+    //     this.props.history.push('/MyList')
+    // }
 
     render() {
     
         return (
             <div>
-                <header><h1>Stores</h1></header>
+                <header><h1>Items in order of Stores</h1></header>
+
+                {/* <section>
+                    <button onClick={this.handleAddItemClick}>Add Item</button>
+                    <button onClick={this.handleMyListClick}>My List</button>
+                </section> */}
 
                 <table className="itemTable">
                     <thead>
@@ -75,8 +80,9 @@ class Stores extends Component {
                             <th>Item</th>
                             <th>Amount</th>
                             <th>Unit</th>
-                            <th>Type</th>
+                            <th>Category</th>
                             <th>Store</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -84,7 +90,7 @@ class Stores extends Component {
                             <tr key={itemsArray.id}>
                                 {/* I just replaced the name of the current 
                                 "To Do/Done" button with below "conditional rendering" */}
-                                <td><button onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>{itemsArray.status?<>Done</>:<>To Do</>}</button></td>
+                                <td><button onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>{itemsArray.status?<>Done</>:<>To do</>}</button></td>
                                 {/* This is conditional rendering. 
                                 Means;
                                 if "True" or "?" render "Done", 
@@ -92,7 +98,7 @@ class Stores extends Component {
 
                                 {/* {itemsArray.status
                                     ? <td>Done</td>
-                                    : <td>TO Do</td>
+                                    : <td>To do</td>
                                 } */}
 
                                 <td>{itemsArray.item_name}</td>
@@ -107,9 +113,6 @@ class Stores extends Component {
                     </tbody>
                 </table>
 
-
-                <button onClick={this.handleAddItemClick}>Add Item</button>
-                <button onClick={this.handleMyListClick}>My List</button>
             </div>
         )
     }
