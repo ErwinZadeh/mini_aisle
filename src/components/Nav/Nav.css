@@ -8,13 +8,13 @@
 
 .nav {
   overflow: hidden;
-  background-color: #1741B3;
+  background-color: #627BB3;
 }
 
 .nav-link {
   float: left;
-  color: #FFD66E;
-  background-color: #1741B3;
+  color: #FFECBF;
+  background-color: #627BB3;
   text-align: center;
   padding: 24px 10px;
   text-decoration: none;
@@ -28,7 +28,7 @@
 }
 
 .nav-link:hover {
-  background-color: #008183;
+  background-color: #BFD3FF;
 }
 
 .nav-right {

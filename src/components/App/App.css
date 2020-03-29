@@ -11,15 +11,15 @@ main {
 }
 
 .alert {
-  background-color: #ff4545;
+  background-color: #627BB3;
   margin: 50px;
 }
 
 
-h1 {
+h2 {
   /* background-color: #C8BBB1; */
-  background-color: #1741B3;
-  color: #FFD66E;
+  background-color: #627BB3;
+  color: #FFECBF;
   margin: 0;
   margin-bottom: 0;
   padding: 0.50em;
@@ -28,41 +28,41 @@ h1 {
   width: 100%;
 }
 
-h2 {
+h3 {
   /* background-color: #C8BBB1; */
-  background-color: #1741B3;
-  color: #A39C29;
+  background-color: #627BB3;
+  color: #ffffff;
   margin: 0;
   margin-bottom: 0;
   padding: 0.50em;
   text-align: center;
   text-shadow: 5px 1px 3px #333;
-  width: 90%;
+  width: 95%;
 }
 
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
   color: #050500
 }
 
 section:nth-of-type(odd) {
   /* background-color: #FFD4CA; */
-  background-color: #1741B3;
+  background-color: #627BB3;
 }
 
 section:nth-of-type(even) {
-  background-color: #5482FF;
+  background-color: #BFD3FF;
 }
 
 form {
-  background-color: #B38C29;
+  background-color: #FFECBF;
   width: 80%;
   height: 450px;
   margin: 20px auto;
   padding: 25px;
   border-radius: 2px;
   border-radius: 0.25em;
-  box-shadow: 3px 4px 5px #FFCF54;
+  box-shadow: 3px 4px 5px #B3A074;
 }
 
 /* a {
@@ -96,13 +96,13 @@ input {
 }
 
 .log-in:hover, .log-out:hover, .register:hover {
-  background-color: #008183;
+  background-color: #B3A074;
 }
 
 .log-in, .log-out, .register {
-  background-color: #5482FF;
+  background-color: #627BB3;
   border-radius: 5px;
-  color: #f8f8f8;
+  color: #FFF4D9;
   min-height: 35px;
   min-width: 80px;
   outline:0;
@@ -117,7 +117,7 @@ input {
   padding:0;
   font: inherit;
   outline:0;
-  border-bottom:1px solid #1741B3; 
+  border-bottom:1px solid #ffffff; 
   cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ input {
 
 table {
   width: 100%;
-  background-color: #B38C29;
+  background-color: #ffffff;
   border-collapse: collapse;
 }
 
@@ -136,13 +136,13 @@ th, td {
 
 
 tbody tr:nth-of-type(odd) {
-  background-color: #FFD66E;
+  background-color: #FFF4D9;
 }
 
 
 thead tr {
   /*background-color: #DED0C5;*/
-  background-color: #A39C29;
+  background-color: #d8d8d8;
   color: #222222;
 }
 

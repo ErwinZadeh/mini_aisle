@@ -66,7 +66,7 @@ class Stores extends Component {
     
         return (
             <div>
-                <header><h1>Items in order of Stores</h1></header>
+                <header><h2>Items in order of Stores</h2></header>
 
                 {/* <section>
                     <button onClick={this.handleAddItemClick}>Add Item</button>

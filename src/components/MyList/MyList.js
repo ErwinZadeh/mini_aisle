@@ -50,7 +50,7 @@ class MyList extends Component {
     render() {
         return (
             <div>
-                <header><h1>Items in order of Category</h1></header>
+                <header><h2>Items in order of Category</h2></header>
 
                 {/* <section>
                     <button onClick={this.handleAddItemClick}>Add Item</button>

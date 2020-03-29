@@ -7,7 +7,7 @@ import './Header.css'
 // or even care what the redux state is, so it doesn't need 'connect()'
 
 const Header = () => (
-  <h1>MINI-AISLE</h1>
+  <h2>MINI-AISLE</h2>
 );
 
 export default Header;

@@ -78,7 +78,7 @@ class AddItem extends Component {
     render() {
         return (
             <div>
-                <header><h1>Add Item</h1></header>
+                <header><h2>Add Item</h2></header>
                 {/* <section>
                     <button onClick={this.handleMyListClick}>My List</button>
                     <button onClick={this.handleStoresClick}>Stores</button>
