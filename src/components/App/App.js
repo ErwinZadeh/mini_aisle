@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <section>
           <Header />
           {/* <Nav /> */}
           <Switch>
@@ -82,7 +82,7 @@ class App extends Component {
 
           <Nav />
           <Footer />
-        </div>
+        </section>
       </Router>
     )
   }

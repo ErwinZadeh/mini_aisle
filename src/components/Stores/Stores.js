@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import axios from 'axios';
 
+// import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+// import { makeStyles } from '@material-ui/core/styles';
+import 'typeface-roboto';
+import Button from '@material-ui/core/Button';
+
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+
 class Stores extends Component {
 
     state = {
@@ -40,9 +49,9 @@ class Stores extends Component {
           })
     }    
     
-    deleteButton = (event) => {
-        console.log("delete me!", event.target.name);
-        axios.delete(`/item/${event.target.name}`)
+    deleteButton = (id) => {
+        console.log("delete me!", {id});
+        axios.delete(`/item/${id}`)
             .then((response) => {
                 alert('Item was deleted from your list!');
                 console.table('in /item delete', response);
@@ -65,7 +74,7 @@ class Stores extends Component {
     render() {
     
         return (
-            <div>
+            <section>
                 <header><h2>Items in order of Stores</h2></header>
 
                 {/* <section>
@@ -90,7 +99,8 @@ class Stores extends Component {
                             <tr key={itemsArray.id}>
                                 {/* I just replaced the name of the current 
                                 "To Do/Done" button with below "conditional rendering" */}
-                                <td><button onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>{itemsArray.status?<>Done</>:<>To do</>}</button></td>
+                                <td><Button color="primary" onClick={ () => this.editButton(itemsArray.id, itemsArray.status) }>
+                                    {itemsArray.status?<>Done</>:<>To do</>}</Button></td>
                                 {/* This is conditional rendering. 
                                 Means;
                                 if "True" or "?" render "Done", 
@@ -107,13 +117,13 @@ class Stores extends Component {
                                 <td>{itemsArray.category}</td>
                                 <td>{itemsArray.store}</td>
 
-                                <td><button name={itemsArray.id} onClick={(event)=>this.deleteButton(event, itemsArray.id)}>Delete</button></td>
+                                <td><IconButton aria-label="delete" color="secondary" onClick={() => this.deleteButton(itemsArray.id)}><DeleteIcon /></IconButton></td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
 
-            </div>
+            </section>
         )
     }
 }

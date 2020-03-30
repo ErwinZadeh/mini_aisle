@@ -1,7 +1,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
-  color: rgb(6, 37, 121);
+  color: #222222;
   margin: 10;
 }
 
@@ -24,7 +24,7 @@ h2 {
   margin-bottom: 0;
   padding: 0.50em;
   text-align: center;
-  text-shadow: 5px 1px 3px #333;
+  text-shadow: 2px 1px 2px #333;
   width: 100%;
 }
 
@@ -54,9 +54,16 @@ section:nth-of-type(even) {
   background-color: #BFD3FF;
 }
 
+section {
+  border-radius: 0.25em;
+  box-shadow: 3px 4px 5px #D1B7A5;
+  margin-bottom: 2em;
+  padding: 1.5em;
+}
+
 form {
   background-color: #FFECBF;
-  width: 80%;
+  width: 70%;
   height: 450px;
   margin: 20px auto;
   padding: 25px;
@@ -154,9 +161,4 @@ thead tr {
 
 .align-input {
   margin-left: 115px;
-}
-
-
-.red {
-  background-color: red;
 }

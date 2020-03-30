@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 import axios from 'axios';
+import './MyList.css';
+
+// import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
+// import { makeStyles } from '@material-ui/core/styles';
+// import 'typeface-roboto';
+// import Button from '@material-ui/core/Button';
+
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 
 class MyList extends Component {
 
@@ -26,9 +36,9 @@ class MyList extends Component {
         })
     }
 
-    deleteButton = (event) => {
-        console.log("delete me!", event.target.name);
-        axios.delete(`/item/${event.target.name}`)
+    deleteButton = (id) => {
+        console.log("delete me!", {id});
+        axios.delete(`/item/${id}`)
             .then((response) => {
                 alert('Item was deleted from your list!');
                 console.table('in /item delete', response);
@@ -49,7 +59,7 @@ class MyList extends Component {
 
     render() {
         return (
-            <div>
+            <section>
                 <header><h2>Items in order of Category</h2></header>
 
                 {/* <section>
@@ -99,13 +109,13 @@ class MyList extends Component {
                                 <td>{itemsArray.store}</td>
                                 <td>{itemsArray.category}</td>
 
-                                <td><button name={itemsArray.id} onClick={(event) => this.deleteButton(event, itemsArray.id)}>Delete</button></td>
+                                <td><IconButton aria-label="delete" color="secondary" onClick={() => this.deleteButton(itemsArray.id)}><DeleteIcon /></IconButton></td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
 
-            </div>
+            </section>
         )
     }
 }

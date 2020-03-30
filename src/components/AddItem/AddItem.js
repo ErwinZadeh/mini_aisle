@@ -57,7 +57,8 @@ class AddItem extends Component {
                 amountNumber: '',
                 amountUnit: '',
                 category: '',
-                shoppingStore: ''
+                shoppingStore: '',
+                userID: this.props.user.id
             }
         })
     }
@@ -153,7 +154,7 @@ class AddItem extends Component {
                     {/* <input placeholder="store" type="text" value={this.state.newItem.shoppingStore}
                         onChange={(event) => this.handleItemChange('shoppingStore', event)} /><br /> */}
 
-                    <button type="submit">ADD</button><br />
+                    <button  type="submit">ADD</button>
                 </form>
 
             </div>
