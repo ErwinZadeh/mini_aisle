@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
+import Button from '@material-ui/core/Button';
+
 class AddItem extends Component {
 
     // userID which we need to POST to user_id column in item table in database, 
@@ -154,7 +156,7 @@ class AddItem extends Component {
                     {/* <input placeholder="store" type="text" value={this.state.newItem.shoppingStore}
                         onChange={(event) => this.handleItemChange('shoppingStore', event)} /><br /> */}
 
-                    <button  type="submit">ADD</button>
+                    <Button variant="contained" color="primary" type="submit">ADD</Button>
                 </form>
 
             </div>
