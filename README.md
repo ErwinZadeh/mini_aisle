@@ -1,3 +1,26 @@
+Mini AISLE
+Solo Project
+
+Every day, millions of people around the world who cook and eat at their own homes need to do their grocery shopping. Hundreds of different grocery items come to their mind and then are checked or unchecked to be approved in the process of thinking of what should be cooked.
+
+Even if People be able to keep track of those different grocery items, planning to buy those in their super busy world is more than enough confusion. Grocery shopping is not something people enjoy, but they have to do. It is better to make an app that can integrate all their activities in grocery shopping.
+
+It is obvious anything that could help people make the process of their daily/weekly basis grocery shopping easier, will be accepted by them willingly.
+
+People hate when they come back home and are not able to recall buying a needed grocery item for the night.
+
+They love when they could do all their daily/weekly grocery shopping they had planned, in the least time with the best price, without any confusion.
+
+In this Application we define “Mini AISLE” which is the MVP of the farer future project which will be called “AISLE”.
+
+“Mini AISLE” will be responsible for keeping track of the users’ grocery shopping lists from different grocery stores in this unified app. It will be developed based on “Mobile First” technology to be available on all cell phones, to make it easier for users to use it anywhere & anytime.
+
+We are going to make it impossible for you to forget your grocery shopping!
+
+Technologies: 
+
+● Node ● Express ● React ● Redux ● Sagas ● PostgreSQL ● Passport ● Google Maps API  ● Material-UI 
+
 # Prime Project
 This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
 
